@@ -6,7 +6,7 @@ import { ToolbarButton } from './types';
 export const THRESHOLDS = [
     {
         width: 565,
-        order: [ 'camera', 'microphone', 'whiteboard', 'screenShot', 'desktop', 'alertButton', 'tileview' ]
+        order: [ 'microphone', 'camera', 'whiteboard', 'screenShot', 'desktop', 'recording', 'tileview' ]
     },
     {
         width: 520,
@@ -70,8 +70,7 @@ export const MAIN_TOOLBAR_BUTTONS_PRIORITY = [
     'feedback',
     'download',
     'help',
-    'screenShot',
-    'alertButton'
+    'screenShot'
 ];
 
 export const TOOLBAR_TIMEOUT = 4000;
@@ -144,10 +143,4 @@ export const VISITORS_MODE_BUTTONS: ToolbarButton[] = [
     'fullscreen',
     'stats',
     'videoquality'
-];
-
-export const TOOLBAR_BUTTONS_TO_EXCLUDE = [
-    'camara',
-    'chat',
-    'invite'
 ];

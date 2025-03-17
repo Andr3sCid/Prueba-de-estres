@@ -30,7 +30,6 @@ import HangupMenuButton from './HangupMenuButton';
 import { LeaveConferenceButton } from './LeaveConferenceButton';
 import OverflowMenuButton from './OverflowMenuButton';
 import Separator from './Separator';
-import { TOOLBAR_BUTTONS_TO_EXCLUDE } from '../../constants';
 
 /**
  * The type of the React {@code Component} props of {@link Toolbox}.
@@ -243,15 +242,6 @@ export default function Toolbox({
             (!reactionsButtonEnabled && (raiseHandInOverflowMenu || isNarrowLayout || isMobile))
             || overflowMenuButtons.some(({ key }) => key === 'reactions'));
     const showRaiseHandInReactionsMenu = showReactionsInOverflowMenu && raiseHandInOverflowMenu;
-
-    const isInConfernce = Boolean(conference);
-
-    let buttonToUse = mainMenuButtons;
-
-    if (isInConfernce) {
-        buttonToUse = mainMenuButtons.filter(button => !TOOLBAR_BUTTONS_TO_EXCLUDE.includes(button.key));
-    }
-
 
     return (
         <div

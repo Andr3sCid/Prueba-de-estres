@@ -111,7 +111,6 @@ const {
     IconWifi1Bar,
     IconWifi2Bars,
     IconWifi3Bars,
-    IconAlertButton,
     IconYahoo
 } = Object.keys(DEFAULT_ICON).reduce((exportedIcons: Record<string, any>, key) => {
     return {
@@ -232,6 +231,5 @@ export {
     IconWifi1Bar,
     IconWifi2Bars,
     IconWifi3Bars,
-    IconYahoo,
-    IconAlertButton
+    IconYahoo
 };

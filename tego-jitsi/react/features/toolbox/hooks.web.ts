@@ -73,7 +73,6 @@ import { isButtonEnabled, isDesktopShareButtonDisabled } from './functions.web';
 import { useCaptureButton } from './image-video-capture/hooks';
 import { ICustomToolbarButton, IToolboxButton, ToolbarButton } from './types';
 import { onScreenShoot } from './image-video-capture/function';
-import { useAlertButton } from './allert-button/hooks';
 
 
 const microphone = {
@@ -296,13 +295,11 @@ export function useToolboxButtons(
     const feedback = useFeedbackButton();
     const _download = useDownloadButton();
     const _help = useHelpButton();
-    const alertButton = useAlertButton();
 
     const buttons: { [key in ToolbarButton]?: IToolboxButton; } = {
         microphone,
         camera,
         screenShot,
-        alertButton,
         profile,
         desktop: dekstopSharing,
         chat,
